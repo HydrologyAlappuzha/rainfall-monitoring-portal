@@ -3,24 +3,23 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>🌧 Rainfall Monitoring Portal</title>
+<title>Rainfall Monitoring Portal</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Segoe UI",sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
 }
 
 body{
-background:#F8FAFB;
-overflow:hidden;
+    background:#F8FAFB;
+    overflow:hidden;
 }
 
 /* ==========================================
@@ -28,80 +27,62 @@ HEADER
 ========================================== */
 
 .header{
-width:100%;
-background:linear-gradient(
-135deg,
-#3D5A80,
-#4F709C,
-#98C1D9
-);
-color:white;
-padding:16px 24px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.15);
-position:relative;
-overflow:hidden;
-z-index:1000;
+    width:100%;
+    background:linear-gradient(
+        135deg,
+        #3D5A80,
+        #4F709C,
+        #98C1D9
+    );
+    color:white;
+    padding:16px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+    position:relative;
+    z-index:1000;
 }
 
 .header-left h1{
-font-size:24px;
-font-weight:600;
-letter-spacing:0.5px;
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:0.5px;
 }
 
 .header-left p{
-font-size:13px;
-color:#E0FBFC;
-margin-top:4px;
+    font-size:13px;
+    color:#E0FBFC;
+    margin-top:4px;
 }
-
-/* CLOUD IMAGE */
-
-.cloud-container{
-position:absolute;
-left:20px;
-top:5px;
-opacity:0.88;
-pointer-events:none;
-}
-
-.cloud-container img{
-height:35px;
-width:auto;
-}
-
-/* STATUS BADGE */
 
 .status-badge{
-background:rgba(255,255,255,0.18);
-padding:10px 16px;
-border-radius:10px;
-font-size:13px;
-backdrop-filter:blur(6px);
-font-weight:500;
+    background:rgba(255,255,255,0.18);
+    padding:10px 16px;
+    border-radius:10px;
+    font-size:13px;
+    backdrop-filter:blur(6px);
+    font-weight:500;
 }
 
 /* ==========================================
-DASHBOARD CONTAINER
+DASHBOARD
 ========================================== */
 
 .dashboard-container{
-width:100%;
-height:calc(100vh - 82px);
-padding:12px;
+    width:100%;
+    height:calc(100vh - 82px);
+    padding:12px;
 }
 
 .dashboard-frame{
-width:100%;
-height:100%;
-border:none;
-border-radius:18px;
-overflow:hidden;
-background:white;
-box-shadow:0 4px 18px rgba(0,0,0,0.12);
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 4px 18px rgba(0,0,0,0.12);
 }
 
 /* ==========================================
@@ -109,63 +90,59 @@ FOOTER
 ========================================== */
 
 .footer{
-position:fixed;
-bottom:8px;
-right:18px;
-background:rgba(255,255,255,0.9);
-padding:6px 12px;
-border-radius:8px;
-font-size:11px;
-color:#4b5d6b;
-backdrop-filter:blur(6px);
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    position:fixed;
+    bottom:8px;
+    right:18px;
+    background:rgba(255,255,255,0.90);
+    padding:6px 12px;
+    border-radius:8px;
+    font-size:11px;
+    color:#4b5d6b;
+    backdrop-filter:blur(6px);
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
 /* ==========================================
-MOBILE STYLING
+MOBILE
 ========================================== */
 
 @media (max-width:768px){
 
-.header{
-padding:14px 16px;
-flex-direction:column;
-align-items:flex-start;
-gap:10px;
-}
+    .header{
+        padding:14px 16px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
 
-.header-left h1{
-font-size:18px;
-line-height:1.3;
-}
+    .header-left h1{
+        font-size:18px;
+        line-height:1.3;
+    }
 
-.header-left p{
-font-size:11px;
-}
+    .header-left p{
+        font-size:11px;
+    }
 
-.status-badge{
-font-size:11px;
-padding:8px 12px;
-}
+    .status-badge{
+        font-size:11px;
+        padding:8px 12px;
+    }
 
-.dashboard-container{
-padding:8px;
-height:calc(100vh - 120px);
-}
+    .dashboard-container{
+        padding:8px;
+        height:calc(100vh - 120px);
+    }
 
-.dashboard-frame{
-border-radius:14px;
-}
+    .dashboard-frame{
+        border-radius:14px;
+    }
 
-.footer{
-font-size:10px;
-right:10px;
-bottom:10px;
-}
-
-.cloud-container img{
-height:55px;
-}
+    .footer{
+        font-size:10px;
+        right:10px;
+        bottom:10px;
+    }
 
 }
 
@@ -181,28 +158,39 @@ HEADER
 
 <div class="header">
 
+```
 <div class="header-left">
 
-<h1>🌧 Rainfall Monitoring Portal</h1>
+    <h1>🌧 Rainfall Monitoring Portal</h1>
 
-<p>Real-Time Rainfall Monitoring & Decision Support System</p>
+    <p>Rainfall Monitoring & Decision Support System</p>
 
 </div>
 
 <div class="status-badge">
 
-Daily Rainfall Data
+    Real-Time Rainfall Intelligence
 
 </div>
-
-
-</div>
+```
 
 </div>
 
 <!-- ==========================================
-DASHBOARD
+POWER BI DASHBOARD
+========================================== -->
 
+<div class="dashboard-container">
+
+```
+<iframe
+    id="powerbi-frame"
+    class="dashboard-frame"
+    allowfullscreen="true">
+</iframe>
+```
+
+</div>
 
 <!-- ==========================================
 FOOTER
@@ -210,14 +198,16 @@ FOOTER
 
 <div class="footer">
 
+```
 Rainfall Monitoring & Decision Support System
+```
 
 </div>
 
 <script>
 
 /* ==========================================
-REPLACE THESE LINKS
+REPLACE WITH ACTUAL POWER BI LINKS
 ========================================== */
 
 const desktopDashboard =
@@ -235,27 +225,26 @@ document.getElementById("powerbi-frame");
 
 function loadDashboard(){
 
-if(window.innerWidth <= 768){
+    if(window.innerWidth <= 768){
 
-iframe.src = mobileDashboard;
+        iframe.src = mobileDashboard;
 
-}else{
+    }else{
 
-iframe.src = desktopDashboard;
+        iframe.src = desktopDashboard;
 
-}
+    }
 
 }
 
 loadDashboard();
 
 window.addEventListener(
-"resize",
-loadDashboard
+    "resize",
+    loadDashboard
 );
 
 </script>
 
 </body>
-
 </html>
